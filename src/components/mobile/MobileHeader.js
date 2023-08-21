@@ -93,7 +93,7 @@ export default function MobileHeader() {
           {
             user ? 
             <>
-              <p className={styles.user_title}>{`${user.displayName} 님 환영합니다.`}</p>
+              <p className={styles.user_title}>{`'${user.displayName}' 님 환영합니다.`}</p>
               <p className={styles.user_icon}><img src={user.photoURL} alt='프로필' /></p>
             </>
             :
