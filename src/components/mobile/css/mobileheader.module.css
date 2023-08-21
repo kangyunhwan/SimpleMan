@@ -53,24 +53,37 @@ div.menu_text_wrap{
   margin-top:16px;
   box-sizing:border-box;
   padding:0px 16px;
+  height:16px;
+  position:relative;
+  left:0px;
+  top:0px;
 }
-div.menu_text_wrap p{
-  font-size:14px;
-}
-div.menu_text_wrap p:nth-child(1){
+div.menu_text_wrap p.user_text{
   font-size:16px;
   font-weight:500;
   margin-bottom:10px;
+
 }
-div.menu_text_wrap p:nth-child(2){
-  line-height:18px;
-  color:gray;
+div.menu_text_wrap p.user_icon{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  border:1px solid #1B2430;
+  position:absolute;
+  right:105px;
+  top:-8px;
+  overflow:hidden;
 }
+div.menu_text_wrap p.user_icon img{
+  display:block;
+  width:100%;
+}
+
 ul#mobile_login_menu{
   box-sizing:border-box;
   padding:0px 16px;
   height:40px;
-  margin-top:20px;
+  margin-top:26px;
   margin-bottom:20px;
   /* overflow:hidden; */
 }
