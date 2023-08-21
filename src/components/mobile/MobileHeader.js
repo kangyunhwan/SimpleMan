@@ -4,6 +4,8 @@ import { RiMenu2Fill } from 'react-icons/ri';
 import { RiSearch2Line } from 'react-icons/ri';
 import { gsap } from 'gsap';
 import { Link, createSearchParams, useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../../context/AuthContext';
+import { login, logout } from '../../api/firebase';
 
 
 export default function MobileHeader() {
@@ -76,6 +78,9 @@ export default function MobileHeader() {
 
   const navigate = useNavigate()
 
+  const {user} = useAuthContext()
+  console.log('user', user)
+
   return (
     <header id={styles.mobile_header}>
       <h1 id={styles.mobile_logo} onClick={()=>{navigate('/')}}>Simple Man</h1>
@@ -85,14 +90,28 @@ export default function MobileHeader() {
         <h2 className='hidden'>모바일메뉴</h2>
         <p id={styles.menu_logo}>Simple Man</p>
         <div className={styles.menu_text_wrap}>
-          <p>로그아웃 상태입니다.</p>
-          <p>
-            심플맨에 가입하여<br/>
-            더 많은 혜택을 누리세요.
-          </p>
+          {
+            user ? 
+            <>
+              <p>{`${user.displayName} 님 환영합니다.`}</p>
+            </>
+            :
+            <>
+              <p>로그아웃 상태입니다.</p>
+              <p>
+                심플맨에 가입하여<br/>
+                더 많은 혜택을 누리세요.
+              </p>
+            </>
+          }
         </div>
         <ul id={styles.mobile_login_menu}>
-          <li><button>로그인</button></li>
+          {
+            user ? 
+              <li><button onClick={logout}>로그아웃</button></li>            
+            :
+              <li><button onClick={login}>로그인</button></li>
+          }
           <li><button>회원가입</button></li>
         </ul>
         <ul id={styles.mobilemenu_list}>

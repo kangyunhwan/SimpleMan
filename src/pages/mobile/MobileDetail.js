@@ -3,18 +3,20 @@ import styles from './css/mobiledetail.module.css'
 import useProducts from '../../hooks/useProducts'
 import { useParams } from 'react-router-dom'
 import regExp from '../../util/regExp'
+import { getProductDetail } from '../../api/firebase'
 
 export default function MobileDetail() {
-  const [allProducts] = useProducts()
+  
 
   const [selectItem, setSelectItem] = useState([])
 
   const {mobProductsId} = useParams()
   
   useEffect(()=>{
-    const selectItem = allProducts.filter((item)=>(item.id===mobProductsId))
-    setSelectItem(selectItem)
-  }, [allProducts])
+    getProductDetail(mobProductsId).then((res)=>{
+      setSelectItem(res)
+    })
+  }, [mobProductsId])
 
   let count = useMemo(()=>(1))
 
@@ -46,24 +48,24 @@ export default function MobileDetail() {
   return (
    <>
       {
-        selectItem.map((item)=>(
-          <section id={styles.prd_detail_wrap} key={item.id}>
+        
+          <section id={styles.prd_detail_wrap} >
           <h2 className='hidden'>상품디테일</h2>
-            <div id={styles.prd_img} key={item.id}>
-              <img src={item.image} alt='상품' />
+            <div id={styles.prd_img}>
+              <img src={selectItem.image} alt='상품' />
             </div>
             <div id={styles.prd_info_wrap}>
               <button className={styles.like_btn}>찜하기</button>
-              <p className={styles.prd_name}>{item.name}</p>
+              <p className={styles.prd_name}>{selectItem.name}</p>
               <table className={styles.prd_table}>
                 <tbody>
                   <tr className={styles.prd_table_price}>
                     <th>판매가</th>
-                    <td>{regExp.comma(item.price)} 원</td>
+                    <td>{regExp.comma(selectItem.price)} 원</td>
                   </tr>
                   <tr className={styles.prd_table_info}>
                     <th>상품요약정보</th>
-                    <td>{item.text}</td>
+                    <td>{selectItem.text}</td>
                   </tr>
                   <tr className={styles.prd_table_option}>
                     <th>색상</th>
@@ -101,7 +103,7 @@ export default function MobileDetail() {
             </div>
             <div id={styles.total_price}>
               <p>Total</p>
-              <p>{regExp.comma(item.price*prdCount)} 원</p>
+              <p>{regExp.comma(selectItem.price*prdCount)} 원</p>
             </div>
             <div id={styles.btn_wrap}>
               <button className={styles.buy_btn}>BUY NOW</button>
@@ -110,7 +112,7 @@ export default function MobileDetail() {
             <div id={styles.prd_detail}>
               <p className={styles.prd_detail_title}>상품상세정보</p>
               <p className={styles.prd_detail_img}>
-                <img src={item.image} alt='상품상세'  />
+                <img src={selectItem.image} alt='상품상세'  />
               </p>
             </div>
             <div id={styles.prd_guide}>
@@ -120,7 +122,7 @@ export default function MobileDetail() {
                 <li>1. 구매금액 관계 없이 전상품 무료배송입니다.</li>
                 <li>2. 결제일로부터 1~5일 이내에 상품이 출고됩니다.(단 토일 공휴일 제외)</li>
                 <li>3. 배송은 본사 물류센터 또는 매장에서 발송 됩니다.</li>
-                <li>4. 마이페이지 > 구매내역 > 주문/배송 조회 에서 구매하신 상품의 배송 상태를 확인하실 수 있습니다.</li>
+                <li>4. 마이페이지 &gt; 구매내역 &gt; 주문/배송 조회 에서 구매하신 상품의 배송 상태를 확인하실 수 있습니다.</li>
               </ul>
               <p className={`${styles.prd_guide_title} ${styles.prd_guide_qksvna}`}>반품안내</p>
               <ul className={styles.prd_guide_text}>
@@ -146,7 +148,7 @@ export default function MobileDetail() {
               </ul>
             </div>
           </section>
-        ))
+        
       }
     </>
     
