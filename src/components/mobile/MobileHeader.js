@@ -93,13 +93,13 @@ export default function MobileHeader() {
           {
             user ? 
             <>
-              <p className={styles.user_text}>{`${user.displayName} 님 환영합니다.`}</p>
+              <p className={styles.user_title}>{`${user.displayName} 님 환영합니다.`}</p>
               <p className={styles.user_icon}><img src={user.photoURL} alt='프로필' /></p>
             </>
             :
             <>
-              <p>로그아웃 상태입니다.</p>
-              <p>
+              <p className={styles.user_title}>로그아웃 상태입니다.</p>
+              <p className={styles.user_text}>
                 심플맨에 가입하여<br/>
                 더 많은 혜택을 누리세요.
               </p>
