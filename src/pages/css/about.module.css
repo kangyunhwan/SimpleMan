@@ -1,0 +1,33 @@
+section#about_wrap{
+  width:1240px;
+  min-height:500px;
+  margin:60px auto 0px;
+}
+p#about_title{
+  text-align:center;
+  font-size:24px;
+}
+div.about_img{
+  width:520px;
+  height:650px;
+  margin:60px auto 0px;
+}
+div.about_img img{
+  display:block;
+  width:100%;
+}
+div.about_text{
+  margin-top:50px;
+  text-align:center;
+}
+div.about_text p{
+  color:#1B2430;
+  font-size:14px;
+  line-height:21px;
+}
+
+@media screen and (max-width:1240px){
+  section#about_wrap{
+    width:100%;
+  }
+}

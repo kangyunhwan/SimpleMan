@@ -1,0 +1,13 @@
+section#banner_wrap{
+  width:100%;
+  height:100%;
+}
+div#banner_list{
+  width:100%;
+  height:100%;
+}
+ul#banner_list div{}
+div#banner_list div img{
+  display:block;
+  width:100%;
+}

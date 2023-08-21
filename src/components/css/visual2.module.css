@@ -1,0 +1,152 @@
+section#visual{
+  width:100%;
+  /* min-height:600px; */
+  /* background:#333; */
+  margin: 60px auto 0px;
+}
+p.visual_title{
+  text-align:center;
+  font-size:3.75em;
+  color:#1B2430;
+}
+p.visual_text{
+  text-align:center;
+  font-size:14px;
+  line-height:21px;
+  color:#1B2430;
+  margin-top:44px;
+}
+p.visual_shop_btn{
+  text-align:center;
+  margin-top:40px;
+}
+p.visual_shop_btn button{
+  background:white;
+  border:1px solid #315eff;
+  font-size:1em;
+  font-weight:500;
+  color:white;
+  padding:12px 25px;
+  color:#315eff;
+  cursor:pointer;
+}
+
+div#visual_wrap{
+  width:85%;
+  /* height:500px; */
+  margin:60px auto 0px;
+  overflow:hidden;
+  position:relative;
+  left:0px;
+  top:0px;
+}
+ul#visual_list{
+  width:100%;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: repeat(7,20%);
+  align-items:center;
+  position:relative;
+  left:0px;
+  top:0px;
+}
+ul#visual_list li{
+  width:100%;
+  transition:0.5s ease-out;
+  position:relative;
+  left:0px;
+  top:0px;
+}
+ul#visual_list li::after{
+  content:"";
+  display:block;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.65);
+  position:absolute;
+  left:0px;
+  top:0px;
+  transition:0.5s ease-out;
+  
+}
+ul#visual_list li img{
+  display:block;
+  width:100%;
+}
+ul#visual_list li:nth-child(1){
+  transform:scale(0.6)
+}
+ul#visual_list li:nth-child(2){
+  transform:scale(0.6);
+}
+ul#visual_list li:nth-child(3){
+  transform:scale(0.8) translateX(-40px);
+}
+ul#visual_list li:nth-child(4){
+  transform:scale(1);
+}
+ul#visual_list li:nth-child(4)::after{
+  opacity:0;
+}
+ul#visual_list li:nth-child(5){
+  transform:scale(0.8) translateX(40px);
+}
+ul#visual_list li:nth-child(6){
+  transform:scale(0.6)
+}
+ul#visual_list li:nth-child(7){
+  transform:scale(0.6)
+}
+
+button.next_btn{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:white;
+  border:1px solid #1B2430;
+  cursor:pointer;
+  position:absolute;
+  right:0px;
+  top:40%;
+  font-size:24px;
+}
+button.next_btn:hover{
+  background:#1B2430;
+  color:white;
+}
+
+button.prev_btn{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:white;
+  border:1px solid #1B2430;
+  cursor:pointer;
+  position:absolute;
+  left:0px;
+  top:40%;
+  font-size:24px;
+}
+button.prev_btn:hover{
+  background:#1B2430;
+  color:white;
+}
+
+
+@media screen and (max-width:1240px){
+  section#visual{
+    width:100%;
+  }
+}
+
+@media screen and (max-width:980px){
+  section#visual{
+    font-size:14px;
+  }
+  ul#visual_list li:nth-child(3){
+    transform:scale(0.8) translateX(-20px);
+  }
+  ul#visual_list li:nth-child(5){
+    transform:scale(0.8) translateX(20px);
+  }
+}

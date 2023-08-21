@@ -1,0 +1,23 @@
+*,p,span,a,button,h1,h2,h3,h4,h5,h6,ul,li{
+  font-family:"Noto Sans KR";
+  text-decoration:none;
+  /* color:black; */
+}
+
+body,html{
+
+  background-color:#FBFBFB;
+}
+body::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.hidden{
+  width:1px;
+  height:1px;
+  font-size:0px;
+  line-height:0px;
+  position:absolute;
+  left:0;
+  top:0;
+}

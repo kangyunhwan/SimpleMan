@@ -1,0 +1,187 @@
+header#pcheader{
+  width:1240px;
+  height:50px;
+  margin:35px auto 0px;
+  position:relative;
+  
+}
+h1#logo{
+  
+  width:auto;
+  height:100%;
+  position:absolute;
+  left:10px;
+  top:0px;
+  font:bold 28px "Playfair Display";
+  color:#1B2430;
+  text-decoration:none;
+  line-height:50px;
+}
+h1#logo button{
+  font:bold 28px "Playfair Display";
+  color:#1B2430;
+  text-decoration:none;
+  line-height:50px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+nav#mainmenu{
+  width:34%;
+  height:100%;
+  position:absolute;
+  left:30%;
+  top:0px;
+}
+ul#mainmenu_list{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content:space-between;
+  align-content:center;
+}
+ul#mainmenu_list li{
+  height:100%;
+  position:relative;
+  left:0px;
+  top:0px;
+}
+ul#mainmenu_list li::after{
+  content:"";
+  display:block;
+  width:80%;
+  height:2px;
+  background:#315eff;
+  position:absolute;
+  left:50%;
+  margin-left:-37.5%;
+  bottom:7px;
+  transform:scale(0,1);
+  transition:0.4s ease;
+}
+ul#mainmenu_list li.selected::after{
+  transform:scale(1,1)
+}
+ul#mainmenu_list li a{
+  display:block;
+  width:100%;
+  height:100%;
+  line-height:50px;
+  font-size:16px;
+  font-weight:500;
+  text-decoration:none;
+  color:#1B2430;
+  position:relative;
+  left:0px;
+  top:0px;
+  transition:0.5s ease;
+}
+/* ul#mainmenu_list li a:hover{
+  top:-8px;
+} */
+/* ul#mainmenu_list li.selected a{
+  top:-8px;
+} */
+
+p.basket{
+  width:28px;
+  height:28px;
+  position:absolute;
+  right:80px;
+  top:12px;
+}
+p.basket::after{
+  content:"2";
+  display:block;
+  width:16px;
+  height:16px;
+  background:#315EFF;
+  border-radius:50%;
+  position:absolute;
+  right:-3px;
+  top:-3px;
+  color:white;
+  font-size:10px;
+  font-weight:500;
+  text-align:center;
+  line-height:16px;
+  cursor:pointer;
+}
+p.basket button{
+  width:100%;
+  height:100%;
+  border:none;
+  background:none;
+  padding:0;
+  cursor:pointer;
+}
+p.basket button svg{
+  width:100%;
+  height:100%;
+}
+
+p.login_btn{
+  width:auto;
+  height:50px;
+  line-height:50px;
+  position:absolute;
+  right:10px;
+  top:0px;
+}
+p.login_btn button{
+  border:none;
+  background:none;
+  font:bold 16px "Noto Sans KR";
+  cursor:pointer;
+}
+div.profile{
+  position:absolute;
+  right:130px;
+  top:10px;
+}
+div.profile button{
+  float:left;
+  display:block;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  overflow:hidden;
+  border:none;
+  /* background:#000; */
+  border:1px solid #1B2430;
+  padding:0px;
+  cursor:pointer;
+}
+div.profile button img{
+  display:block;
+  width:100%;
+}
+div.profile p{
+  float:left;
+  line-height:30px;
+  margin-right:10px;
+}
+p.signup{
+  width:120px;
+  height:100%;
+  position:absolute;
+  right:10px;
+  top:0;
+}
+p.signup button{
+  width:100%;
+  height:100%;
+  border:1px solid #1B2430;
+  background:white;
+  font-size:16px;
+  font-weight:500;
+  cursor:pointer;
+}
+
+@media screen and (max-width:1240px){
+  header#pcheader{
+    width:100%;
+  }
+}

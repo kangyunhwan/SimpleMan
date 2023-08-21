@@ -1,0 +1,192 @@
+section#prd_detail_wrap{
+  width:100%;  
+}
+div#prd_img{
+  width:100%;
+  height:375px;
+}
+div#prd_img img{
+  display:block;
+  width:100%;
+  height:100%;
+}
+div#prd_info_wrap{
+  box-sizing:border-box;
+  padding:0px 16px;
+  position:relative;
+  left:0px;
+  top:0px;
+  margin-top:20px;
+  margin-bottom:30px;
+  border-bottom:1px solid #0a0a0a;
+}
+button.like_btn{
+  width:25px;
+  height:25px;
+  background:url('/public/images/like_btn.png') no-repeat;
+  background-size:contain;
+  border:none;
+  text-indent:-99999px;
+  cursor:pointer;
+  position:absolute;
+  right:16px;
+  top:0px;
+}
+p.prd_name{
+  font-size:16px;
+  font-weight:500;
+}
+table.prd_table{
+  font-size:15px;
+  margin-top:25px;
+  margin-bottom:15px;
+  
+}
+table.prd_table tr{
+  border-bottom:20px solid #FBFBFB;
+}
+table.prd_table th{
+  width:30%;
+  text-align:left;
+  color:#222;
+}
+tr.prd_table_price td{
+  color:#315EFF;
+  font-weight:500;
+}
+tr.prd_table_info td{
+  color:#555;
+}
+tr.prd_table_option select{
+  width:100%;
+  height:29px;
+  border-radius:none;
+  border:1px solid #555;
+  background:none;
+}
+
+tr.prd_table_count button{
+  border:1px solid #555;
+  background:#fbfbfb;
+  font-size:18px;
+  margin-right:10px;
+  padding:0px;
+  width:30px;
+  height:29px;
+  vertical-align: top;
+}
+tr.prd_table_count span{
+  display:inline-block;
+  margin-right:10px;
+  border:1px solid #555;
+  width:40px;
+  height:29px;
+  box-sizing:border-box;
+  line-height:29px;
+  text-align:center;
+}
+div#total_price{
+  padding:0px 16px;
+  overflow:hidden;
+  position:relative;
+  left:0px;
+  top:0px;
+}
+div#total_price p{
+  display:inline-block;
+  font-size:18px;
+}
+div#total_price p:nth-child(2){
+  float:right;
+  color:#315EFF;
+  font-weight:500;
+}
+div#btn_wrap{
+  margin-top:40px;
+  margin-bottom:40px;
+  box-sizing:border-box;
+  padding:0px 16px;
+}
+div#btn_wrap button{
+  height:36px;
+}
+button.buy_btn{
+  width:65%;
+  margin-right:5%;
+  border:none;
+  background:#315EFF;
+  color:white;
+  font-weight:500;
+}
+button.cart_btn{
+  width:30%;
+  border:1px solid #444;
+  color:#444;
+  background:#FBFBFB;
+}
+div#prd_detail{
+  border-top:1px solid #0a0a0a;
+  box-sizing:border-box;
+  padding:0px 16px;
+  margin-bottom:40px;
+}
+p.prd_detail_title{
+  font-size:20px;
+  margin-top:25px;
+  text-align:center;
+  margin-bottom:26px;
+}
+p.prd_detail_img img{
+  display:block;
+  width:100%;
+}
+
+div#prd_guide{
+  border-top:1px solid #0a0a0a;
+  box-sizing:border-box;
+  padding:0px 16px;
+}
+p.prd_guide_title{
+  font-size:16px;
+  position:relative;
+  left:0px;
+  top:0px;
+  text-indent:32px;
+  margin-bottom:8px;
+}
+p.prd_guide_qothd::after{
+  content:"";
+  display:block;
+  background:url(/public/images/truck-fast-solid.png) no-repeat;
+  background-size:contain;
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0px;
+  top:0px;
+}
+ul.prd_guide_text{
+  color:#555;
+  font-size:14px;
+  line-height:21px;
+  margin-bottom:14px;
+  box-sizing:border-box;
+  padding-left:32px;
+}
+p.prd_guide_qksvna::after{
+  content:"";
+  display:block;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  background:url(/public/images/rotate-solid.png) no-repeat;
+  background-size:contain;
+}
+
+ul.prd_guide_sub_text{
+  box-sizing:border-box;
+  padding-left:16px;
+  list-style:disc;
+}
