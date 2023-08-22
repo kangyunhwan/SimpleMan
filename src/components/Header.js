@@ -78,9 +78,9 @@ export default function Header() {
         </>
         :
         <>
-          <p className={styles.basket}>
+          {/* <p className={styles.basket}>
             <button ><FiShoppingBag/></button>
-          </p>
+          </p> */}
 
           <p className={styles.login_btn}>
             <button onClick={login}>Login</button>
