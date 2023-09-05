@@ -53,49 +53,17 @@ ul#prdlist{
   grid-column-gap: 1.6%;
   grid-row-gap:30px;
 }
-
+ul#prdlist li{
+  cursor:pointer;
+}
 ul#prdlist li:nth-child(4n){
   margin-right:0;
 }
 ul#prdlist li a{
   display:block;
-
 }
 
-p.prdlist_prdimg img{
-  display:block;
-  width:100%;
-}
-p.prdlist_name{
-  height:45px;
-  line-height:45px;
-  font-size:1em;
-  font-weight:400;
-  box-sizing:border-box;
-  border-bottom:1px solid #dddddd;
-  color:#141414;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-p.prdlist_price{
-  font-size:14px;
-  font-weight:400;
-  color:#141414;
-  margin-top:10px;
-}
-p.prdlist_text{
-  color:#a1a1a1;
-  font-size:12px;
-  font-weight:400;
-  margin-top:10px;
-}
-p.prdlist_review{
-  color:#757575;
-  font-size:12px;
-  font-weight:400;
-  margin-top:10px;
-}
+
 
 @media screen and (max-width:1240px){
   section#prdlist_wrap{
