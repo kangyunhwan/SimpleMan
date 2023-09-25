@@ -12,7 +12,6 @@ import { getDatabase, ref, set, get, remove, query, orderByKey, equalTo } from '
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  
   /********** 개인 인증키 입력 **********/
   apiKey: "AIzaSyA27LA2512aBz2eAzdFOD63IZrYdLHtxPg",
   authDomain: "simpleman-6f475.firebaseapp.com",
@@ -21,12 +20,9 @@ const firebaseConfig = {
   storageBucket: "simpleman-6f475.appspot.com",
   messagingSenderId: "1044748608395",
   appId: "1:1044748608395:web:1ce6009d2833517642458e",
-  measurementId: "G-EZ8V8DZSQY"
-
-
-
+  measurementId: "G-EZ8V8DZSQY"  
 };
-console.log('firebaseConfig ', firebaseConfig)
+// console.log('firebaseConfig ', firebaseConfig)
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
@@ -70,7 +66,7 @@ export async function getProducts() { // 데이터 베이스에 등록된 상품
   return get(ref(database, 'products')).then((snapshot) => {
     if (snapshot.exists()) {
       return Object.values(snapshot.val());
-    }
+    }    
     return [];
   });
 }

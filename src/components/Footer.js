@@ -10,27 +10,7 @@ export default function Footer() {
   return (
     <div id={styles.footer_wrap}>
       <footer id={styles.pc_footer}>
-        
-        <article id={styles.footermenu}>
-          <h2 className='hidden'>하단메뉴</h2>
-          <ul id={styles.footermenu_list}>
-            <li><Link>회사소개</Link></li>
-            <li><Link>이용약관</Link></li>
-            <li><Link>개인정보처리방침</Link></li>
-            <li><Link>이용안내</Link></li>
-            <li><Link>제휴문의</Link></li>
-          </ul>
-        </article>
 
-        <article id={styles.footersns}>
-          <h2 className='hidden'>SNS</h2>
-          <ul id={styles.footersns_list}>
-            <li><Link><AiOutlineInstagram/></Link></li>
-            <li><Link><BsFacebook/></Link></li>
-            <li><Link><AiOutlineTwitter/></Link></li>
-            <li><Link><BiLogoPinterestAlt/></Link></li>
-          </ul>
-        </article>
 
         <article id={styles.footer_info}>
           <h2 className='hidden'>주소</h2>

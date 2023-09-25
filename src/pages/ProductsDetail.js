@@ -5,6 +5,9 @@ import { useParams } from 'react-router-dom'
 import useProducts from '../hooks/useProducts'
 import regExp from '../util/regExp'
 import { getProductDetail } from '../api/firebase'
+import { useCallback } from 'react'
+import { useMemo } from 'react'
+import { useRef } from 'react'
 
 export default function ProductsDetail() {
   // const [allProducts] = useProducts()
@@ -14,15 +17,29 @@ export default function ProductsDetail() {
   const [selectProduct, setSelectProduct] = useState([])
 
   useEffect(()=>{
-    // const selectProduct=allProducts.filter((item)=>(item.id===productId))
-    // setSelectProduct(selectProduct)
 
     getProductDetail(productId).then((res)=>{
       setSelectProduct(res)
     })
     
-    
   },[productId])
+
+  const colors = [
+    {index:0, color:'Black'},
+    {index:1, color:'Light Blue'},
+    {index:2, color:'Dark Blue'},
+  ]
+
+  const sizes = [
+    {index:0,size:'S'},
+    {index:1,size:'M'},
+    {index:2,size:'L'},
+    {index:3,size:'XL'},
+    {index:4,size:'XXL'},
+  ]
+
+  const [color, setColor] = useState(null)
+  const [size, setSize] = useState(null)
 
 
   return (
@@ -46,19 +63,35 @@ export default function ProductsDetail() {
                   <div className={styles.info_option}>
                     <p>색상</p>
                     <ul className={styles.info_option_color}>
-                      <li><button>Black</button></li>
+                      {
+                        colors.map((item)=>(
+                          <li key={item.index} className={item.color===color ? `${styles.selected}` : ``} onClick={(e)=>{setColor(item.color)}}><button>{item.color}</button></li>
+                        ))
+                      }
+                      {/* <li><button>Black</button></li>
                       <li className={styles.selected}><button>Light Blue</button></li>
-                      <li><button>Dark blue</button></li>
+                      <li><button>Dark blue</button></li> */}
                     </ul>
                     <p>사이즈</p>
                     <ul className={styles.info_option_size}>
-                      <li><button>S</button></li>
+                      {
+                        sizes.map((item)=>(
+                          <li  key={item.index} className={item.size===size ? `${styles.selected}` : ``} onClick={(e)=>{
+                            setSize((prev)=>(item.size))
+                            
+                          }}><button>{item.size}</button></li>
+                        ))
+                      }
+                      {/* <li><button>S</button></li>
                       <li><button>M</button></li>
                       <li className={styles.selected}><button>L</button></li>
                       <li><button>XL</button></li>
-                      <li><button>XXL</button></li>
+                      <li><button>XXL</button></li> */}
                     </ul>
-                  </div> 
+                  </div>
+                  <div className={styles.prd_choice}>
+
+                  </div>
                   <div className={styles.info_total}>
                     <p className={styles.info_total_text}>가격</p>
                     <p className={styles.info_total_price}><span>{regExp.comma(selectProduct.price)}</span> 원</p>

@@ -2,9 +2,6 @@ import React from 'react'
 import styles from './css/categoryfashion.module.css'
 import { Link, createSearchParams, useNavigate } from 'react-router-dom'
 
-
-
-
 export default function Categoryfashion() {
 
   const navigate=useNavigate()

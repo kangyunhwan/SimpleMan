@@ -63,7 +63,7 @@ p.info_price span{
 }
 div.info_option{
   padding-bottom:30px;
-  margin-bottom:88px;
+  
   border-bottom:1px solid #bfbfbf;
 }
 div.info_option>p{
@@ -122,7 +122,7 @@ ul.info_option_size li button{
   cursor:pointer;
 }
 ul.info_option_size li.selected button{
-  border:1px solid black;
+  border:2px solid black;
 }
 ul.info_option_size li:last-child{
   margin-right:0px;

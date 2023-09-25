@@ -20,16 +20,6 @@ import { AuthContextProvider } from './context/AuthContext';
 
 
 export default function App() {
-  // const [isMobile,setIsMobile] = useState(null)
-
-  // useEffect(()=>{
-  //   let ua = window.navigator.userAgent.toLowerCase();      
-  //   if(/iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua) || /ipad/.test(ua) || /windows ce/.test(ua)) {
-  //     setIsMobile(true)
-  //   }else{
-  //     setIsMobile(false)
-  //   }
-  // },[])
 
   let router=null;
 
