@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function MobileAbout() {
   return (
-    <div>MobileAbout</div>
+    <div className="page_wait">
+      <img src="./images/page_wait.jpg"/>
+    </div>
   )
 }

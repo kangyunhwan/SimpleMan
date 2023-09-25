@@ -15,7 +15,7 @@ export default function MobileHeader() {
     {index:1, name:'Event', pathname:'/', subMenuList:[{index:0, name:'이벤트', pathname:'/mobile_event'}, ]},
     {index:2, name:'Products', pathname:'/', subMenuList:[{index:0, name:'전체', pathname:'/mobile_products'}, {index:1, name:'상의', pathname:'/mobile_products'}, {index:2, name:'하의', pathname:'/mobile_products'}, {index:3, name:'신발', pathname:'/mobile_products'}, {index:4, name:'가방', pathname:'/mobile_products'}, {index:5, name:'액세서리', pathname:'/mobile_products'}]},
     {index:3, name:'About', pathname:'/', subMenuList:[{index:0, name:'회사소개', pathname:'/mobile_about'}]},
-    {index:4, name:'Community', pathname:'/', subMenuList:[{index:0, name:'Q&A', pathname:'/mobile_qna'}, {index:1, name:'공지사항', pathname:'/mobile_notice'}]},
+    {index:4, name:'Community', pathname:'/', subMenuList:[{index:0, name:'Q&A', pathname:'/mobile_qna'}]},
   ]
 
   const menuWrap = useRef()

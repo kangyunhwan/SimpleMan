@@ -1,0 +1,12 @@
+section#event_wrap{
+  width:1240px;
+  min-height:500px;
+  margin:60px auto 0px;
+  text-align:center;
+}
+
+@media screen and (max-width:1240px){
+  section#event_wrap{
+    width:100%;
+  }
+}

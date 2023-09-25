@@ -15,7 +15,6 @@ import MobileProducts from './pages/mobile/MobileProducts';
 import MobileAbout from './pages/mobile/MobileAbout';
 import MobileDetail from './pages/mobile/MobileDetail';
 import MobileQna from './pages/mobile/MobileQna';
-import MobileNotice from './pages/mobile/MobileNotice';
 import { AuthContextProvider } from './context/AuthContext';
 
 
@@ -35,7 +34,6 @@ export default function App() {
           {path:'/mobile_about',element:<MobileAbout/>},
           {path:'/mobile_products/:mobProductsId', element:<MobileDetail/>},
           {path:'/mobile_qna', element:<MobileQna/>},
-          {path:'/mobile_notice', element:<MobileNotice/>}
         ]
       }
     ])
