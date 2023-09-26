@@ -15,7 +15,7 @@ export default function Footer() {
         <article id={styles.footer_info}>
           <h2 className='hidden'>주소</h2>
           <p className={styles.footer_address}>
-          서울특별시 강남구 강남대로 428 만이빌딩/5층, 10층 Tex : (012)345-6789 Fax : (012)345-6789 Email : greenshop@greenshop.co.kr
+          서울특별시 강남구 강남대로 428 만이빌딩/5층, 10층 Tex : (012)345-6789 Fax : (012)345-6789 Email : simpleman@nate.com
           </p>
           <p className={styles.footer_copy}>
           COPYRIGHT © Simple Man 2022 - All Rights Reserved
