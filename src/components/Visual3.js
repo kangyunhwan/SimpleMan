@@ -81,7 +81,7 @@ export default function Visual3() {
     
 
       <p className={styles.visual_title}>
-        시선을 사로잡는 스타일링
+        시선을sss 사로잡는 스타일링
       </p>
       <p className={styles.visual_text}>
       최신 트렌드와 남성들의 다양한 스타일을 한 곳에서 만나보세요.<br/>

@@ -24,19 +24,24 @@ export default function Header() {
   }
 
   const {search} = useLocation();
+  
 
   useEffect(()=>{
+    
+    
     if(search){
       const path = decodeURIComponent(new URLSearchParams(search).get('path'))
       
       if(path==='products'){
         setClickIndex(2)
       }
+
+      console.log(search);
     }
   },[search])
 
   const {user} = useAuthContext()
-  console.log('user', user)
+  // console.log('user', user)
 
   return (
    
